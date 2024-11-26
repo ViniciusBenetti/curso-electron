@@ -1,0 +1,22 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {},
+  "runArgs": [
+    "--init",
+    "--cap-add=SYS_ADMIN",
+    "--cap-add=SYS_PTRACE",
+    "--network=host",
+    "--env=DISPLAY"
+  ],
+  "workspaceFolder": "/workspace",
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "ms-azuretools.vscode-docker"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y xvfb dbus-x11 libgtk-3-0 libnotify-bin libnss3 libxss1 libasound2 libatk1.0-0 libx11-xcb1 libxcomposite1 libxrandr2 libxi6 libappindicator1 xdg-utils"
+}
